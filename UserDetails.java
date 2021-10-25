@@ -9,7 +9,7 @@ public class UserDetails {
 		while (check) {
 			Scanner scanner = new Scanner(System.in);
 			System.out.println(
-					"Enter Your Choice for validate\n 1.FirstName\n 2.LastName\n 3.Email\n 4.MobileNumber\n 5.exit");
+					"Enter Your Choice for validate\n 1.FirstName\n 2.LastName\n 3.Email\n 4.MobileNumber\n 5.PassWord\n 6.Exit");
 			int choice = scanner.nextInt();
 			scanner.nextLine();
 			switch (choice) {
@@ -38,6 +38,12 @@ public class UserDetails {
 				System.out.println("Validation for mobile number :" + Pattern.matches(REGEX_MOBILE_NO, mobileNumber));
 				break;
 			case 5:
+				final String REGEX_PASSWORD = "^([a-zA-Z0-9!@#$%^&*_-]{8,})";
+				System.out.println("Enter Password");
+				String passWord = scanner.nextLine();
+				System.out.println("Validation for password :" + Pattern.matches(REGEX_PASSWORD, passWord));
+				break;
+			case 6:
 				check = false;
 				break;
 			}
