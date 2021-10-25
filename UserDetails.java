@@ -1,7 +1,6 @@
 package userdetails;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserDetails {
@@ -15,8 +14,8 @@ public class UserDetails {
 	public static void main(String[] args) {
 		UserDetails user = new UserDetails();
 		final String REGEX_FIRSTNAME = "([A-Z][a-zA-Z]{2,})";
-		Pattern fName = Pattern.compile(REGEX_FIRSTNAME);
-		Matcher matchForFName = fName.matcher(user.inputMethod());
-		System.out.println("Your name is Valid : " + matchForFName.matches());
+		final String REGEX_LASTNAME = "([A-Z][a-zA-Z]{2,})";
+		System.out.println("Validation for First name :" + Pattern.matches(REGEX_FIRSTNAME, user.inputMethod()));
+		System.out.println("Validation for Last Name :" + Pattern.matches(REGEX_LASTNAME, user.inputMethod()));
 	}
 }
