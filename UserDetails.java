@@ -40,7 +40,7 @@ public class UserDetails {
 			case 5:
 				final String REGEX_PASSWORD = "^(?=.*[0-9])"
 						+ "+(?=.*[a-z])(?=.*[A-Z])"
-						+ "+(?=.*[@#$%^&+=])"
+						+ "+(?=.*[@#$%^&+=][{1}])"
 						+ "+(?=\\S+$).{8,}$";
 				System.out.println("Enter Password");
 				String passWord = scanner.nextLine();
